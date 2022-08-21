@@ -7,7 +7,8 @@
 import path from 'path'
 import fs from 'fs'
 
-const { name, version } = JSON.parse(fs.readFileSync('./package.json', 'utf8'))
+console.log(11111, path.resolve('package.json'), path.resolve(__dirname, 'package.json'))
+const { name, version } = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json'), 'utf8'))
 
 export default {
   name,

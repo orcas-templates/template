@@ -6,9 +6,10 @@
 
 import path from 'path'
 import fs from 'fs'
+import { fileURLToPath, URL } from 'url'
 
-console.log(11111, path.resolve('package.json'), path.resolve(__dirname, 'package.json'))
-const { name, version } = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'package.json'), 'utf8'))
+const pkFile = fileURLToPath(new URL('./package.json', import.meta.url))
+const { name, version } = JSON.parse(fs.readFileSync(pkFile, 'utf8'))
 
 export default {
   name,

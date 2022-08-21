@@ -1,4 +1,4 @@
-# @<%= github %>/<%= name %>
+# @<%= repoOwner %>/<%= name %>
 [![Build Status][travis-img]][travis-url]
 [![Dependency Status][dependency-img]][dependency-url]
 [![Code Style][style-img]][style-url]

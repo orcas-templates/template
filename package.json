@@ -1,0 +1,25 @@
+{
+  "name": "@emi-templates/template",
+  "version": "1.0.0",
+  "description": "A template for creating emi templates.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "keywords": [],
+  "author": "happylusn",
+  "license": "MIT",
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+      "template"
+    ]
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}

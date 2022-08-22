@@ -79,6 +79,17 @@ export default {
       ]
     },
     {
+      name: 'complete',
+      /** @param {Array} prev */
+      type: prev => process.env.NODE_ENV === 'test' || prev.includes('complete') ? 'select' : null,
+      message: 'Complete type',
+      hint: ' ',
+      choices: [
+        { title: 'Callback', value: 'callback' },
+        { title: 'Message', value: 'message' }
+      ]
+    },
+    {
       name: 'install',
       type: 'confirm',
       message: 'Install dependencies',

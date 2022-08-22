@@ -6,6 +6,7 @@
 
 import path from 'path'
 import fs from 'fs'
+import chalk from 'chalk'
 import { fileURLToPath, URL } from 'url'
 
 const pkFile = fileURLToPath(new URL('./package.json', import.meta.url))
@@ -129,7 +130,15 @@ export default {
    * */
   complete: async ctx => {
     console.clear()
-    console.log(`Created a new project in ${ctx.project} by the ${ctx.template} template.\n`)
+    console.log(`Created a new project in ${chalk.blue(ctx.project)} by the ${chalk.green(ctx.template)} template.\n`)
+    console.log('Getting Started:')
+    if (ctx.dest !== process.cwd()) {
+      console.log(`  $ cd ${path.relative(process.cwd(), ctx.dest)}`)
+    }
+    if (ctx.config.install === false) {
+      console.log('  $ npm install')
+    }
+    console.log(`  $ ${ctx.config.install ? ctx.config.install : 'npm'} lint`)
     console.log('\n✨ Happy to carry bricks :)\n')
   }
 }

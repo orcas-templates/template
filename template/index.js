@@ -5,8 +5,10 @@
 // @ts-check
 
 import fs from 'fs'
+import { fileURLToPath, URL } from 'url'
 
-const { name, version } = JSON.parse(fs.readFileSync('./package.json', 'utf8'))
+const pkFile = fileURLToPath(new URL('./package.json', import.meta.url))
+const { name, version } = JSON.parse(fs.readFileSync(pkFile, 'utf8'))
 
 export default {
   name,

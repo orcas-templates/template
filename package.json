@@ -10,14 +10,6 @@
   "keywords": [],
   "author": "happylusn",
   "license": "MIT",
-  "standard": {
-    "env": [
-      "jest"
-    ],
-    "ignore": [
-      "template"
-    ]
-  },
   "devDependencies": {
     "prettier": "^2.7.1"
   },

@@ -119,7 +119,7 @@ export default {
    * */
   complete: async ctx => {
     console.clear()
-    console.log(`Created a new project in ${ctx.project} by the ${ctx.template} template.\n`)
+    console.log(`Created a new project in <%= '${ctx.project}' %> by the <%= '${ctx.template}' %> template.\n`)
     console.log('\n✨ Happy to carry bricks :)\n')
   }<% } if (features.includes('complete') && complete === 'message') { %>,
   // TODO: custom complete message

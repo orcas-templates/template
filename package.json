@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint": "prettier --check .",
+    "lint-fix": "prettier --write ."
   },
   "keywords": [],
   "author": "happylusn",
@@ -20,6 +20,6 @@
     ]
   },
   "devDependencies": {
-    "standard": "^17.0.0"
+    "prettier": "^2.7.1"
   }
 }

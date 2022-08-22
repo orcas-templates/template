@@ -81,7 +81,7 @@ export default {
     {
       name: 'complete',
       /** @param {Array} prev */
-      type: prev => process.env.NODE_ENV === 'test' || prev.includes('complete') ? 'select' : null,
+      type: prev => (process.env.NODE_ENV === 'test' || prev.includes('complete') ? 'select' : null),
       message: 'Complete type',
       hint: ' ',
       choices: [
@@ -97,7 +97,7 @@ export default {
     },
     {
       name: 'pm',
-      type: (/** @type {Boolean} */ prev) => process.env.NODE_ENV === 'test' || prev ? 'select' : null,
+      type: (/** @type {Boolean} */ prev) => (process.env.NODE_ENV === 'test' || prev ? 'select' : null),
       message: 'Package manager',
       hint: ' ', // 提示信息
       choices: [

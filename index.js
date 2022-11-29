@@ -4,12 +4,8 @@
  */
 // @ts-check
 const path = require('path')
-const fs = require('fs')
 const chalk = require('chalk')
-const { fileURLToPath, URL } = require('url')
-
-const pkFile = fileURLToPath(new URL('./package.json', import.meta.url))
-const { name, version } = JSON.parse(fs.readFileSync(pkFile, 'utf8'))
+const { name, version } = require('./package.json')
 
 module.exports = {
   name,

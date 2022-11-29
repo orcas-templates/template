@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A template for creating emi templates.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "lint": "prettier --write ."
   },
@@ -11,9 +10,7 @@
   "author": "happylusn",
   "license": "MIT",
   "devDependencies": {
+    "chalk": "^4.1.2",
     "prettier": "^2.7.1"
-  },
-  "dependencies": {
-    "chalk": "^5.0.1"
   }
 }

@@ -3,16 +3,15 @@
  * 2.渲染时会将该配置文件metadata、helpers和prompts配置项注入到模版中
  */
 // @ts-check
-
-import path from 'path'
-import fs from 'fs'
-import chalk from 'chalk'
-import { fileURLToPath, URL } from 'url'
+const path = require('path')
+const fs = require('fs')
+const chalk = require('chalk')
+const { fileURLToPath, URL } = require('url')
 
 const pkFile = fileURLToPath(new URL('./package.json', import.meta.url))
 const { name, version } = JSON.parse(fs.readFileSync(pkFile, 'utf8'))
 
-export default {
+module.exports = {
   name,
   version,
   // source: 'template', // 指定模版资源的目录名 默认为template

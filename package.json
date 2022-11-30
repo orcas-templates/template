@@ -10,7 +10,9 @@
   "author": "happylusn",
   "license": "MIT",
   "devDependencies": {
-    "chalk": "^4.1.2",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
   }
 }

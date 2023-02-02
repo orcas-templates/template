@@ -48,7 +48,7 @@ module.exports = {
       name: 'repoOwner',
       type: 'text',
       message: 'Git repository owner',
-      initial: 'emi-templates'
+      initial: 'orcas-templates'
     },
     {
       name: 'source',
@@ -86,6 +86,12 @@ module.exports = {
       ]
     },
     {
+      name: 'gitInit',
+      type: 'confirm',
+      message: 'Git init && git add && git commit',
+      initial: true
+    },
+    {
       name: 'install',
       type: 'confirm',
       message: 'Install dependencies',
@@ -117,6 +123,7 @@ module.exports = {
    * ctx上下文对象，ctx.config表示当前导出的配置对象，ctx.answers表示用户输入的选项值
    * */
   setup: async ctx => {
+    ctx.config.init = ctx.answers.gitInit
     ctx.config.install = ctx.answers.install && ctx.answers.pm
   },
   /**

@@ -50,7 +50,7 @@ export default {
       name: 'repoOwner',
       type: 'text',
       message: 'Git repository owner',
-      initial: 'emi-templates'
+      initial: 'orcas-templates'
     },
     /*{
       name: 'features',
@@ -122,8 +122,8 @@ export default {
   complete: async ctx => {
     console.clear()
     console.log(`Created a new project in <%= '${ctx.project}' %> by the <%= '${ctx.template}' %> template.\n`)
-    console.log('\n✨ Happy to carry bricks :)\n')
+    console.log('\n✨ Happy hacking :)\n')
   }<% } if (features.includes('complete') && complete === 'message') { %>,
   // TODO: custom complete message
-  complete: '\n✨ Happy to carry bricks :)\n'<% } %>
+  complete: '\n✨ Happy hacking :)\n'<% } %>
 }

@@ -1,0 +1,18 @@
+{
+  "name": "@emi-templates/template",
+  "version": "1.0.0",
+  "description": "A template for creating emi templates.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "happylusn",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

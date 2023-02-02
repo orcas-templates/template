@@ -1,0 +1,19 @@
+{
+  "name": "@<%= repoOwner %>/<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "keywords": [
+    "<%= name %>",
+    "<%= repoOwner %>"
+  ],
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "lint": "prettier --write ."
+  },
+  "author": "<%= author %> <<%= email %>>",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

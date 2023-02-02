@@ -1,3 +1,3 @@
 # template
 
-A template for creating emi templates.
+A template for creating orcas templates.

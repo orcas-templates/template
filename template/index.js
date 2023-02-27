@@ -3,14 +3,10 @@
  * 2.渲染时会将该配置文件metadata、helpers和prompts配置项注入到模版中
  */
 // @ts-check
+const path = require('path')
+const { name, version } = require('./package.json')
 
-import fs from 'fs'
-import { fileURLToPath, URL } from 'url'
-
-const pkFile = fileURLToPath(new URL('./package.json', import.meta.url))
-const { name, version } = JSON.parse(fs.readFileSync(pkFile, 'utf8'))
-
-export default {
+module.exports = {
   name,
   version<% if (source !== 'template') { %>,
   source: '<%= source %>'<% } if (features.includes('metadata')) { %>,

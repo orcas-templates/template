@@ -7,7 +7,6 @@
     "<%= repoOwner %>"
   ],
   "main": "index.js",
-  "type": "module",
   "license": "MIT",
   "scripts": {
     "lint": "prettier --write ."
